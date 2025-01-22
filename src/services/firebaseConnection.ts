@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBnVOT1LnP3rDCIBjFpHALGjNTdAEbay3U",
-  authDomain: "g3-tarefas-puls.firebaseapp.com",
-  projectId: "g3-tarefas-puls",
-  storageBucket: "g3-tarefas-puls.firebasestorage.app",
-  messagingSenderId: "511670674586",
-  appId: "1:511670674586:web:a27fa69a1df6b6fb39eb23",
-  measurementId: "G-85WQSFYBHF"
+  apiKey: "AIzaSyConpSFthSOW5ZXv_En3C7EpmnWHdb22M8",
+  authDomain: "taskhub-fd6c3.firebaseapp.com",
+  projectId: "taskhub-fd6c3",
+  storageBucket: "taskhub-fd6c3.firebasestorage.app",
+  messagingSenderId: "1056197952125",
+  appId: "1:1056197952125:web:ebccae2bb65640d6a26714",
+  measurementId: "G-K1FK24NLY9"
 };
 
 const firebaeApp = initializeApp(firebaseConfig);

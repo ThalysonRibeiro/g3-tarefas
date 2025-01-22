@@ -2,6 +2,8 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 import style from "./styles.module.css";
+import logo from "../../../public/assets/logo.svg";
+import Image from "next/image";
 
 
 export function Header() {
@@ -13,11 +15,17 @@ export function Header() {
       <section className={style.content}>
         <nav className={style.nav}>
           <Link href="/">
-            <h1 className={style.logo}>
-              G3 Tarefas
-              <span>+</span>
-            </h1>
+            <Image
+              className={style.logo}
+              alt="logo TaskHub"
+              src={logo}
+            />
           </Link>
+
+          <Link href="/">
+            <h1 className={style.nameLogo}>Task Hub</h1>
+          </Link>
+
           <Link href="/dashboard"
             className={style.link}>
             Meu painel</Link>

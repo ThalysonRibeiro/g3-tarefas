@@ -21,25 +21,35 @@
 }
 
 .logo {
-  color: #fff;
-  font-size: 32px;
+  width: 50px;
+  height: 50px;
 }
 
-.logo span {
-  color: #ff004c;
-}
 
 .nav {
   display: flex;
   align-items: center;
+
+}
+
+.nameLogo {
+  color: #71717a;
+  margin-right: 24px;
 }
 
 .link {
-  background-color: #ff004c;
-  color: #fff;
+  color: #d4d4d8;
   padding: 4px 14px;
   border-radius: 4px;
   margin: 0 14px;
+  border: 1px dashed #ff004c58;
+
+  transition: transform 0.4s;
+}
+
+.link:hover {
+  transform: scale(1.08);
+  background: #ff004c;
 }
 
 .loginButton {
@@ -48,8 +58,10 @@
 
   padding: 8px 32px;
   border-radius: 24px;
-  color: #fff;
-  border: 1.5px solid #ff004c;
+  color: #d4d4d8;
+  /* border: 1.5px solid #ff004c; */
+  border: 1px dashed #ff004c58;
+
   transition: transform 0.4s;
 }
 

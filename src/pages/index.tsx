@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import heroImage from "../../public/assets/hero.png";
+import heroImage from "../../public/assets/lets-start-illustration.svg";
 import { GetStaticProps } from "next";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/services/firebaseConnection";

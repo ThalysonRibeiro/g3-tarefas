@@ -40,7 +40,7 @@ export default function Dashboard({ user }: HomeProps) {
         where("user", "==", user?.email)
       )
       onSnapshot(q, (snapshot) => {
-        let lista = [] as TaskProps[];
+        const lista = [] as TaskProps[];
 
         snapshot.forEach((doc) => {
           lista.push({
@@ -67,7 +67,7 @@ export default function Dashboard({ user }: HomeProps) {
   async function handleRegisteTask(event: FormEvent) {
     event.preventDefault();
 
-    if (input === "") return;
+    if (!input) return;
 
     try {
       await addDoc(collection(db, "tarefas"), {
@@ -81,7 +81,6 @@ export default function Dashboard({ user }: HomeProps) {
       setPublicTask(false);
     } catch (error) {
       console.log(error);
-
     }
 
   }
@@ -90,7 +89,7 @@ export default function Dashboard({ user }: HomeProps) {
     await navigator.clipboard.writeText(
       `${process.env.NEXT_PUBLIC_URL}/task/${id}`
     )
-    alert("deu certo")
+    // alert("deu certo")
   }
 
   async function handleDeleTask(id: string) {
@@ -163,7 +162,6 @@ export default function Dashboard({ user }: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const session = await getSession({ req });
-  console.log(session);
   if (!session?.user) {
     return {
       redirect: {
